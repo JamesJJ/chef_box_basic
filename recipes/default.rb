@@ -40,6 +40,7 @@ file "/tmp/chef_basic_box_lastrun" do
     notifies :run, "execute[remove-unwanted-os-package-group (#{_grp})]", :immediately
   end
   notifies :run, "execute[yum-update]", :immediately
+  notifies :run, "execute[install AWS CLI]", :delayed
 end
 
 cookbook_file "sshd_config" do
@@ -61,6 +62,7 @@ execute "install AWS CLI" do
   command "pip install --upgrade awscli"
   environment "PATH" => "/bin:/usr/bin:/usr/sbin:/sbin"
   ignore_failure true
+  action :nothing
 end
 
 include_recipe "users::default"
