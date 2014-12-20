@@ -60,6 +60,7 @@ end
 execute "install AWS CLI" do
   command "pip install --upgrade awscli"
   environment "PATH" => "/bin:/usr/bin:/usr/sbin:/sbin"
+  ignore_failure true
 end
 
 include_recipe "users::default"
