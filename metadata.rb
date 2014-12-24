@@ -4,9 +4,11 @@ maintainer_email 'github@jamesjj.net'
 license          'MIT'
 description      'Installs/Configures instances'
 long_description      'Installs/Configures instances'
-version          '0.1.3'
+version          '0.1.4'
 
 depends 'users'
 depends 'chef-solo-search'
 depends 'yum-epel'
-#depends 'shell_preferences'
+# for your Berksfile:
+# cookbook 'shell_preferences', github: 'JamesJJ/chef_shell_preferences', tag: 'v0.1.3'
+depends 'shell_preferences'
