@@ -1,7 +1,7 @@
 name             'box_basic'
 maintainer       'github@jamesjj.net'
 maintainer_email 'github@jamesjj.net'
-license          'All rights reserved'
+license          'MIT'
 description      'Installs/Configures instances'
 long_description      'Installs/Configures instances'
 version          '0.1.2'
