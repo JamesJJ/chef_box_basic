@@ -65,6 +65,7 @@ execute "install AWS CLI" do
   action :nothing
 end
 
+include_recipe "shell_preferences" if (node['box_basic']['set_shell_preferences'] == true)
 include_recipe "users::default"
 # install users by groups
 node['authorization']['groups'].each { |group,gid|

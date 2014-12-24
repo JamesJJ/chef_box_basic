@@ -1,4 +1,6 @@
 
+default["box_basic"]["set_shell_preferences"] = true
+
 default["box_basic"]["install_packages"] = [ "bind-utils","traceroute","telnet","screen","ruby","rubygems","git", "python-pip", "ntp" ]
 
 # CENTOS6 default["box_basic"]["yum_groups_remove"] = [ "X Window System","Desktop Debugging and Performance Tools","MySQL Database client","NFS file server","Network Infrastructure Server","Office Suite and Productivity","Internet Browser","Dial-up Networking Support","Print Server","Printing client","Web Server","E-mail server","Electronic Lab","Fonts","General Purpose Desktop","Graphical Administration Tools","Internet Applications","Java Platform","Directory Client","Legacy X Window System compatibility" ]
