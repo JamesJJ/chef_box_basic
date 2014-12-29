@@ -3,8 +3,6 @@
 #
 require 'date'
 
-include_recipe 'hostname' unless (node['set_fqdn'].nil? || node['set_fqdn'].length < 6)
-
 execute "yum-clean-all" do
   command "yum -q -y clean all"
   environment "PATH" => "/bin:/usr/bin:/usr/sbin:/sbin"
