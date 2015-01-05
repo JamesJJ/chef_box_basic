@@ -8,6 +8,7 @@ default["box_basic"]["yum_groups_remove"] = []
 
 default['yum-epel']['repositories'] = %w{epel}
 
+default['authorization']['groups'] = []
 default['authorization']['sudo']['groups'] = [ 'wheel' ]
 override['authorization']['sudo']['sudoers_defaults'] = [
   '!visiblepw',
