@@ -43,6 +43,14 @@ file "/tmp/chef_basic_box_lastrun" do
   notifies :run, "execute[install AWS CLI]", :delayed
 end
 
+file "/etc/cloud/cloud.cfg.d/99_preserve_hostname.cfg" do
+  owner 'root'
+  group 'root'
+  mode '0644'
+  content "preserve_hostname: true\n"
+  not_if do !File.dir('/etc/cloud/cloud.cfg.d/') end
+end
+
 cookbook_file "sshd_config" do
   path "/etc/ssh/sshd_config"
   group "root"
