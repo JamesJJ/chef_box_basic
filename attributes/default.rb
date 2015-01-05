@@ -1,5 +1,6 @@
 
 default["box_basic"]["set_shell_preferences"] = true
+default["box_basic"]["use_cloudinit_hostname"] = false
 
 default["box_basic"]["install_packages"] = [ "bind-utils","traceroute","telnet","screen","ruby","rubygems","git", "python-pip", "ntp" ]
 

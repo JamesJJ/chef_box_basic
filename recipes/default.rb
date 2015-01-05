@@ -48,7 +48,8 @@ file "/etc/cloud/cloud.cfg.d/99_preserve_hostname.cfg" do
   group 'root'
   mode '0644'
   content "preserve_hostname: true\n"
-  not_if do !File.dir('/etc/cloud/cloud.cfg.d/') end
+  action (node['box_basic']['use_cloudinit_hostname'] ? :create : :delete )
+  not_if do !File.directory?('/etc/cloud/cloud.cfg.d/') end
 end
 
 cookbook_file "sshd_config" do
