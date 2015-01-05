@@ -48,7 +48,7 @@ file "/etc/cloud/cloud.cfg.d/99_preserve_hostname.cfg" do
   group 'root'
   mode '0644'
   content "preserve_hostname: true\n"
-  action (node['box_basic']['use_cloudinit_hostname'] ? :create : :delete )
+  action (node['box_basic']['use_cloudinit_hostname'] ? :delete : :create )
   not_if do !File.directory?('/etc/cloud/cloud.cfg.d/') end
 end
 
