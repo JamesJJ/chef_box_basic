@@ -4,7 +4,7 @@ maintainer_email 'github@jamesjj.net'
 license          'MIT'
 description      'Installs/Configures instances'
 long_description      'Installs/Configures instances'
-version          '0.1.4'
+version          '0.1.9'
 
 depends 'users'
 depends 'chef-solo-search'
