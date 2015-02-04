@@ -12,11 +12,11 @@ bash "yum install 'Development tools' group" do
   creates _once_only_file
   code <<-EOH
     touch '#{_once_only_file}'
-    yum groupinstall 'Development tools' > /tmp/#{_once_only_file}_groupinstall
+    yum groupinstall 'Development tools' > #{_once_only_file}_groupinstall
     if [ $? -ne 0 ]
     then
-      yum groups mark convert  > /tmp/#{_once_only_file}_groups_mark_convert
-      yum groups install 'Development tools' > /tmp/#{_once_only_file}_groups_install
+      yum groups mark convert  > #{_once_only_file}_groups_mark_convert
+      yum groups install 'Development tools' > #{_once_only_file}_groups_install
     fi
   EOH
 end
