@@ -8,7 +8,7 @@ bash "yum install 'Development tools' group" do
   user "root"
   cwd "/"
   umask "033"
-  environment {"PATH" => "/bin:/usr/bin:/sbin:/usr/sbin"}
+  environment "PATH" => "/bin:/usr/bin:/sbin:/usr/sbin"
   creates _once_only_file
   code <<-EOH
     touch '#{_once_only_file}'
