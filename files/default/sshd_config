@@ -104,7 +104,7 @@ GSSAPICleanupCredentials yes
 UsePAM yes
 
 #AllowAgentForwarding yes
-AllowTcpForwarding no
+AllowTcpForwarding yes
 #GatewayPorts no
 #X11Forwarding no
 X11Forwarding no
