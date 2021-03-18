@@ -1,6 +1,6 @@
 name             'box_basic'
-maintainer       'github@jamesjj.net'
-maintainer_email 'github@jamesjj.net'
+maintainer       'JamesJJ'
+maintainer_email 'JamesJJ@users.noreply.github.com'
 license          'MIT'
 description      'Installs/Configures instances'
 long_description      'Installs/Configures instances'
